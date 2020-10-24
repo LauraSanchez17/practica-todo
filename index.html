@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practica To Do</title>
+    <link rel="stylesheet" href="css/todo.css">
+</head>
+
+<body>
+    <header>
+        <div class="campos">
+            <div id="introducetarea">
+                <input type="text" id="introducir" placeholder="Introduce una tarea" value="">
+            </div>
+
+            <br>
+
+            <div>
+
+                <select id="introducePrioridad">
+                    <option value="-1" selected>Selecciona una prioridad</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="URGENTE">URGENTE</option>
+
+                </select>
+
+            </div>
+
+            <br>
+
+            <div>
+                <button value="Guardar" id="btnGuardar">Guardar</button>
+            </div>
+
+
+            <br>
+            <h3>Debes completar todos los campos</h3>
+        </div>
+
+
+        <div class="filtros">
+
+            <div id="filtroPrioridad">
+
+                <select id="prioridad">
+                    <option value="-1" selected>Selecciona una prioridad</option>
+                    <option value="Diaria">Diaria</option>
+                    <option value="Mensual">Mensual</option>
+                    <option value="URGENTE">URGENTE</option>
+
+                </select>
+
+
+                <br>
+
+                <div id="buscadorporpalabra">
+                    <input type="text" id="buscador" placeholder="Tarea a buscar">
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <main>
+
+        <ul class="tarea">
+            <!--  <li style="background-color: red;">
+                <h4>Titulo tarea</h4><input type="submit" name="eliminar" id="btneliminar" value="Eliminar">
+            </li> -->
+
+        </ul>
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+    <script src="js/funciones.js"></script>
+    <script src="js/eventos.js"></script>
+</body>
+
+</html>

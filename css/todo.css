@@ -1,0 +1,64 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+}
+
+header {
+    flex-wrap: wrap;
+    width: 40%;
+    height: 100vh;
+}
+
+
+header .campos {
+    background-color: lightseagreen;
+    color: white;
+    padding: 20px;
+    min-height: 150px;
+}
+
+
+header .filtros {
+    background-color: white;
+    padding: 20px;
+    background-color: lightslategrey;
+}
+
+.tarea {
+    display: flex;
+       flex-wrap: wrap;
+       padding: 10px;
+       margin: 10px 20px;
+ 
+}
+
+
+main {
+    background-color:white;
+    width: 70%;
+    height: 100vh;
+} 
+
+.main li {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+.urgente {
+    background-color:red;
+}
+
+.mensual {
+    background-color: yellow;
+}
+
+.diaria {
+    background-color: green;
+}
