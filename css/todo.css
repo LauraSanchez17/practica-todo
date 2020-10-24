@@ -16,8 +16,8 @@ header {
 
 
 header .campos {
-    background-color: lightseagreen;
-    color: white;
+    background-color: lightgray;
+    color: black;
     padding: 20px;
     min-height: 150px;
 }
@@ -29,22 +29,16 @@ header .filtros {
     background-color: lightslategrey;
 }
 
-.tarea {
-    display: flex;
-       flex-wrap: wrap;
-       padding: 10px;
-       margin: 10px 20px;
- 
-}
 
 
 main {
+    padding: 20px;
     background-color:white;
     width: 70%;
     height: 100vh;
 } 
 
-.main li {
+.main ul {
     display: flex;
     flex-wrap: wrap;
 }
