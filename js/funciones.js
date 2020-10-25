@@ -18,12 +18,14 @@ listaTareas = [
     },
 ];
 
-/* function pintarTareas(pListaTareas, pSeccion) {
+function pintarTareas(pListaTareas, pSeccion) {
     pListaTareas.forEach(tarea => {
         pintarUnaTarea(tarea, pSeccion)
     })
 }
- */
+
+pintarTareas(pListaTareas, pSeccion);
+
 
 let ul = document.querySelector('.tarea');
 
@@ -49,12 +51,11 @@ function pintarUnaTarea(pListaTareas, pSeccion) {
 pintarUnaTarea(listaTareas, ul);
 
 
+/* let filtroPrioridad = document.querySelector('#prioridad');
 
-function filtrarPorPrioridad(plistaTareas, pPrioridad) {
-    const result = plistaTareas.filter(tarea => tarea.prioridad.toLowerCase() == pPrioridad.toLowerCase());
-    return result;
-}
+function filtrarPorPrioridad(pListaTareas, pPrioridad) {
 
-function filtrarPorPalabra(plistaTareas, pBusquedaPalabra) {
+    })
 
-}
+ */
+

@@ -7,7 +7,6 @@ btnGuardar.addEventListener('click', guardarTarea);
 
 let contador = 4;
 function guardarTarea() {
-    debugger
     let valorInput = inputIntroducir.value;
     let valorPrioridad = selectPrioridad.value;
     let nuevaTarea = {};
@@ -19,8 +18,12 @@ function guardarTarea() {
     listaTareas.push(nuevaTarea);
     contador++;
 
-
+    console.log(nuevaTarea);
 }
+
+pintarUnaTarea(listaTareas, ul);
+
+
 
 //listaTareas.push();
 //guardarTarea(3, 'saltar', 'urgente')
