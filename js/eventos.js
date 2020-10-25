@@ -50,19 +50,3 @@ selectorPrioridad.addEventListener('change', event => {
 
 
 
-/* const tareas = new Array();
-
-for (tarea of listaTareas) {
-    tareas.push(tarea.prioridad);
-}
-
-let set = new Set(tareas);
-
-const prioridades = Array.from(set);
-
-prioridades.forEach(diagnostico => {
-    selectPrioridad.innerHTML += `<option value=${prioridad}>${diagnostico}</option>`
-})
-
-
- */

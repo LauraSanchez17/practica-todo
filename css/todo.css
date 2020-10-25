@@ -16,24 +16,27 @@ header {
 
 
 header .campos {
-    background-color: lightgray;
+    background-color: rgb(132, 165, 226);
     color: black;
     padding: 20px;
-    min-height: 150px;
+    min-height: 250px;
 }
 
 
 header .filtros {
-    background-color: white;
     padding: 20px;
-    background-color: lightslategrey;
+    background-color: rgb(93, 120, 160);
+}
+
+header #prioridad {
+  margin-bottom: 20px;
 }
 
 
 
 main {
     padding: 20px;
-    background-color:white;
+    background-color:rgb(114, 130, 201);
     width: 70%;
     height: 100vh;
 } 
@@ -44,15 +47,26 @@ main li {
     justify-content: space-between;
 }
 
+ul button {
+    background-color: rgb(223, 214, 210);
+    margin-top: 10px;
+    margin-right: 100px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+ul button:hover {
+    background-color: lightcoral;
+}
 
 .urgente {
-    background-color:red;
+    color: lightcoral;
 }
 
 .mensual {
-    background-color: yellow;
+    color: rgb(228, 228, 128);
 }
 
 .diaria {
-    background-color: green;
+    color: rgb(128, 223, 128);
 }

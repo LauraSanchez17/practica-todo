@@ -30,7 +30,7 @@ function pintarTareas(pListaTareas, pSeccion) {
         let li = document.createElement('li');
         li.dataset.id = tarea.idTarea;
         let contenidoh4 = document.createTextNode(tarea.titulo);
-        let contenidoinput = document.createTextNode('Eliminar');
+        let contenidoinput = document.createTextNode('Eliminar tarea');
         h4.appendChild(contenidoh4);
         input.appendChild(contenidoinput);
 
@@ -71,9 +71,6 @@ function eliminarElemento(elemento) {
 
 
 
-/* function filtrarPorPrioridad(pListaTareas, pPrioridad) {
-
-}) */
 
 
 
