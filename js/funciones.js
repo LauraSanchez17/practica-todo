@@ -44,18 +44,36 @@ function pintarTareas(pListaTareas, pSeccion) {
 
 }
 
-function eliminarElemento(elemento) {
 
-    console.log(elemento.parentNode);
+function filtrarPorPalabra(pListaTareas, pPalabraBuscada) {
+    const listaFiltrada = pListaTareas.filter(tarea => {
+        let titulo = tarea.titulo;
+        return titulo.toLowerCase().includes(pPalabraBuscada.toLowerCase());
+    })
+    return listaFiltrada;
 }
 
 
 
-/* let filtroPrioridad = document.querySelector('#prioridad');
 
-function filtrarPorPrioridad(pListaTareas, pPrioridad) {
+function eliminarElemento(elemento) {
 
+    let elementoABorrar = (elemento.parentNode);
+    let id = elementoABorrar.dataset.id;
+    let index = listaTareas.findIndex(tarea => {
+        tarea.idTarea == id
     })
+    listaTareas.splice(index, 1)
+    console.log(elementoABorrar);
+    pintarTareas(listaTareas, ul);
 
- */
+}
+
+
+
+/* function filtrarPorPrioridad(pListaTareas, pPrioridad) {
+
+}) */
+
+
 

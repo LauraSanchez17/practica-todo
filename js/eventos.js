@@ -23,12 +23,34 @@ function guardarTarea() {
 }
 
 
+let buscador = document.querySelector('#buscador');
+
+buscador.addEventListener('input', recogerBusqueda);
+
+function recogerBusqueda(event) {
+    let palabraBuscar = event.target.value.trim();
+
+    let listaFiltrada = filtrarPorPalabra(listaTareas, palabraBuscar);
+    pintarTareas(listaFiltrada, ul);
+}
 
 
 
-/* let selectPrioridad = document.querySelector('#prioridad');
 
-const tareas = new Array();
+let selectorPrioridad = document.querySelector('#prioridad');
+
+selectorPrioridad.addEventListener('change', event => {
+    let prioridad = event.target.value;
+    let listaFiltradaPorPrioridad = listaTareas.filter(tarea => {
+        return tarea.prioridad == prioridad;
+
+    })
+    pintarTareas(listaFiltradaPorPrioridad, ul)
+})
+
+
+
+/* const tareas = new Array();
 
 for (tarea of listaTareas) {
     tareas.push(tarea.prioridad);
@@ -42,7 +64,5 @@ prioridades.forEach(diagnostico => {
     selectPrioridad.innerHTML += `<option value=${prioridad}>${diagnostico}</option>`
 })
 
-selectPrioridad.addEventListener('change', event => {
-    pintarTareas(filtrarPorPrioridad(listaTareas, event.target.value), seccionTarea)
-})
+
  */
