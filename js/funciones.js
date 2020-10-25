@@ -1,3 +1,4 @@
+let ul = document.querySelector('.tarea');
 var listaTareas = new Array();
 
 listaTareas = [
@@ -18,22 +19,16 @@ listaTareas = [
     },
 ];
 
+
+
 function pintarTareas(pListaTareas, pSeccion) {
-    pListaTareas.forEach(tarea => {
-        pintarUnaTarea(tarea, pSeccion)
-    })
-}
-
-pintarTareas(pListaTareas, pSeccion);
-
-
-let ul = document.querySelector('.tarea');
-
-function pintarUnaTarea(pListaTareas, pSeccion) {
+    ul.innerHTML = '';
     for (tarea of pListaTareas) {
         let h4 = document.createElement('h4');
         let input = document.createElement('button');
+        input.setAttribute('onclick', "eliminarElemento(this)");
         let li = document.createElement('li');
+        li.dataset.id = tarea.idTarea;
         let contenidoh4 = document.createTextNode(tarea.titulo);
         let contenidoinput = document.createTextNode('Eliminar');
         h4.appendChild(contenidoh4);
@@ -41,14 +36,19 @@ function pintarUnaTarea(pListaTareas, pSeccion) {
 
         li.appendChild(h4);
         li.appendChild(input);
-
+        li.className = tarea.prioridad
         pSeccion.appendChild(li);
 
-        li.className = tarea.prioridad
+
     }
 
 }
-pintarUnaTarea(listaTareas, ul);
+
+function eliminarElemento(elemento) {
+
+    console.log(elemento.parentNode);
+}
+
 
 
 /* let filtroPrioridad = document.querySelector('#prioridad');

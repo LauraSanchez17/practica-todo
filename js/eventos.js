@@ -3,6 +3,7 @@ let btnGuardar = document.querySelector('#btnGuardar')
 let inputIntroducir = document.querySelector('#introducir');
 let selectPrioridad = document.querySelector('#introducePrioridad');
 
+
 btnGuardar.addEventListener('click', guardarTarea);
 
 let contador = 4;
@@ -10,7 +11,7 @@ function guardarTarea() {
     let valorInput = inputIntroducir.value;
     let valorPrioridad = selectPrioridad.value;
     let nuevaTarea = {};
-    nuevaTarea.IdTarea = contador;
+    nuevaTarea.idTarea = contador;
     nuevaTarea.titulo = valorInput;
     nuevaTarea.prioridad = valorPrioridad;
 
@@ -18,26 +19,14 @@ function guardarTarea() {
     listaTareas.push(nuevaTarea);
     contador++;
 
-    console.log(nuevaTarea);
+    pintarTareas(listaTareas, ul);
 }
 
-pintarUnaTarea(listaTareas, ul);
 
 
 
-//listaTareas.push();
-//guardarTarea(3, 'saltar', 'urgente')
 
-
-
-/* let seccionTarea = document.querySelector('#tarea');
-
-//pintarTareas(seccionTarea);
-//pintarUnaTarea(pTarea, pSection);
-
-
-
-let selectPrioridad = document.querySelector('#prioridad');
+/* let selectPrioridad = document.querySelector('#prioridad');
 
 const tareas = new Array();
 
