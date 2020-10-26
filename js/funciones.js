@@ -26,7 +26,8 @@ function pintarTareas(pListaTareas, pSeccion) {
     for (tarea of pListaTareas) {
         let h4 = document.createElement('h4');
         let input = document.createElement('button');
-        input.setAttribute('onclick', "eliminarElemento(this)");
+        //input.setAttribute('onclick', "eliminarElemento(this)");
+        input.addEventListener('click', eliminarElemento);
         let li = document.createElement('li');
         li.dataset.id = tarea.idTarea;
         let contenidoh4 = document.createTextNode(tarea.titulo);
@@ -56,13 +57,16 @@ function filtrarPorPalabra(pListaTareas, pPalabraBuscada) {
 
 
 
-function eliminarElemento(elemento) {
+function eliminarElemento(event) {
 
-    let elementoABorrar = (elemento.parentNode);
+    let elementoABorrar = (this.parentNode);
     let id = elementoABorrar.dataset.id;
+    console.log(elementoABorrar);
     let index = listaTareas.findIndex(tarea => {
-        tarea.idTarea == id
+        return tarea.idTarea == id
+
     })
+    console.log(index);
     listaTareas.splice(index, 1)
     console.log(elementoABorrar);
     pintarTareas(listaTareas, ul);
